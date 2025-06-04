@@ -26,4 +26,4 @@ while True:
         json.dump(report, f, indent=2)
     print("Generated new hourly report at", current_time.isoformat())
     current_time += timedelta(hours=1)
-    time.sleep(3600) 
+    time.sleep(15) 
