@@ -2,6 +2,7 @@ import json
 import random
 import time
 from datetime import datetime, timedelta
+import os
 
 def generate_synthetic_hourly_report(timestamp):
     return {
@@ -19,11 +20,16 @@ def generate_synthetic_hourly_report(timestamp):
     }
 
 current_time = datetime.utcnow()
+output_dir = os.path.dirname(os.path.abspath(__file__))
 
 while True:
     report = generate_synthetic_hourly_report(current_time)
-    with open("demo_hourly_latest.json", "w") as f:
+    filename = f"demo_hourly_{current_time.strftime('%Y%m%dT%H%M%SZ')}.json"
+    filepath = os.path.join(output_dir, filename)
+
+    with open(filepath, "w") as f:
         json.dump(report, f, indent=2)
-    print("Generated new hourly report at", current_time.isoformat())
+
+    print(f"Generated: {filename}")
     current_time += timedelta(hours=1)
-    time.sleep(15) 
+    time.sleep(20)  
