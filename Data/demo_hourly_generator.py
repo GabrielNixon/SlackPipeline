@@ -20,7 +20,7 @@ def generate_synthetic_hourly_report(timestamp):
     }
 
 current_time = datetime.utcnow()
-output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Data/hourly")
+output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hourly")
 os.makedirs(output_dir, exist_ok=True)
 
 while True:
