@@ -32,4 +32,4 @@ while True:
 
     print(f"Generated: {filename}")
     current_time += timedelta(hours=1)
-    time.sleep(20)  
+    time.sleep(3600)  
