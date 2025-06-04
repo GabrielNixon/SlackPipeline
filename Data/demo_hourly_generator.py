@@ -20,7 +20,8 @@ def generate_synthetic_hourly_report(timestamp):
     }
 
 current_time = datetime.utcnow()
-output_dir = os.path.dirname(os.path.abspath(__file__))
+output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hourly")
+os.makedirs(output_dir, exist_ok=True)
 
 while True:
     report = generate_synthetic_hourly_report(current_time)
@@ -30,6 +31,11 @@ while True:
     with open(filepath, "w") as f:
         json.dump(report, f, indent=2)
 
-    print(f"Generated: {filename}")
+    print(f"Generated: {filepath}")
+
+    os.system("git add .")
+    os.system(f"git commit -m 'Add {filename}'")
+    os.system("git push")
+
     current_time += timedelta(hours=1)
-    time.sleep(3600)  
+    time.sleep(3600)
