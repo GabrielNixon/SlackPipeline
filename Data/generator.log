@@ -11,3 +11,8 @@ To github.com:GabrielNixon/SlackPipeline.git
  create mode 100644 Data/kafka_to_parquet_consumer.py
 To github.com:GabrielNixon/SlackPipeline.git
    faa19ab..05d37bc  main -> main
+[main e703d93] Add demo_hourly_20250605T190719Z.json
+ 2 files changed, 19 insertions(+)
+ create mode 100644 Data/hourly/demo_hourly_20250605T190719Z.json
+To github.com:GabrielNixon/SlackPipeline.git
+   05d37bc..e703d93  main -> main
