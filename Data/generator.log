@@ -1,0 +1,2 @@
+/Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/demo_hourly_generator.py:22: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  current_time = datetime.utcnow()
