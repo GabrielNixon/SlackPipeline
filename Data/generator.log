@@ -5,3 +5,9 @@
  create mode 100644 Data/hourly/demo_hourly_20250605T170719Z.json
 To github.com:GabrielNixon/SlackPipeline.git
    dbebb3d..1333347  main -> main
+[main 05d37bc] Add demo_hourly_20250605T180719Z.json
+ 3 files changed, 47 insertions(+)
+ create mode 100644 Data/hourly/demo_hourly_20250605T180719Z.json
+ create mode 100644 Data/kafka_to_parquet_consumer.py
+To github.com:GabrielNixon/SlackPipeline.git
+   faa19ab..05d37bc  main -> main
