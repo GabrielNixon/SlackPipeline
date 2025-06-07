@@ -3,11 +3,9 @@
 [main 1333347] Add demo_hourly_20250605T170719Z.json
  1 file changed, 13 insertions(+)
  create mode 100644 Data/hourly/demo_hourly_20250605T170719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   dbebb3d..1333347  main -> main
-[main 05d37bc] Add demo_hourly_20250605T180719Z.json
- 3 files changed, 47 insertions(+)
- create mode 100644 Data/hourly/demo_hourly_20250605T180719Z.json
+To github.com:GabrielNixon/SlackPipelinefatal: could not read Username for 'https://github.com': Interrupted system call
+error: waitpid for git-remote-https failed: No child processes
+44 Data/hourly/demo_hourly_20250605T180719Z.json
  create mode 100644 Data/kafka_to_parquet_consumer.py
 To github.com:GabrielNixon/SlackPipeline.git
    faa19ab..05d37bc  main -> main
@@ -91,3 +89,8 @@ To github.com:GabrielNixon/SlackPipeline.git
  create mode 100644 Data/hourly/demo_hourly_20250606T100719Z.json
 To github.com:GabrielNixon/SlackPipeline.git
    9fdb28d..46ab98d  main -> main
+[main 9bae217] Add demo_hourly_20250606T110719Z.json
+ 2 files changed, 18 insertions(+)
+ create mode 100644 Data/hourly/demo_hourly_20250606T110719Z.json
+To github.com:GabrielNixon/SlackPipeline.git
+   46ab98d..9bae217  main -> main
