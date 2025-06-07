@@ -5,11 +5,12 @@
  create mode 100644 Data/hourly/demo_hourly_20250605T170719Z.json
 To github.com:GabrielNixon/SlackPipelinefatal: could not read Username for 'https://github.com': Interrupted system call
 error: waitpid for git-remote-https failed: No child processes
-44 Data/hourly/demo_hourly_20250605T180719Z.json
- create mode 100644 Data/kafka_to_parquet_consumer.py
+[main 47ba695] Add demo_hourly_20250605T180548Z.json
+ 2 files changed, 18 insertions(+)
+ create mode 100644 Data/hourly/demo_hourly_20250605T180548Z.json
 To github.com:GabrielNixon/SlackPipeline.git
-   faa19ab..05d37bc  main -> main
-[main e703d93] Add demo_hourly_20250605T190719Z.json
+   8adf252..47ba695  main -> main
+n
  2 files changed, 19 insertions(+)
  create mode 100644 Data/hourly/demo_hourly_20250605T190719Z.json
 To github.com:GabrielNixon/SlackPipeline.git
