@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import datetime
 
 # === Load JSON Data ===
-with open("Data/demo_hourly_5months.json", "r") as f:
+with open("demo_hourly_5months.json", "r") as f:
     data = json.load(f)
 
 # === Normalize & Preprocess ===
