@@ -34,14 +34,35 @@ else:
     cpu_max_q = filtered["cpu.queue_days"].max()
     gpu_max_q = filtered["gpu.queue_days"].max()
 
-    # === Print Summary ===
-    summary = f"""
+
+# === Generate Contextual Insight ===
+if cpu_avg > 90 and gpu_avg > 90:
+    utilization_comment = "Both CPU and GPU resources seem to be nearing full capacity."
+elif cpu_avg > 85 or gpu_avg > 85:
+    utilization_comment = "At least one resource is showing signs of heavy usage."
+else:
+    utilization_comment = "Utilization levels appear moderate."
+
+if gpu_max_q > cpu_max_q + 2:
+    queue_comment = "The GPU job queue appears to experience longer delays compared to CPU."
+elif cpu_max_q > gpu_max_q + 2:
+    queue_comment = "The CPU job queue has been relatively more congested in this period."
+else:
+    queue_comment = "Queue delays are relatively balanced between CPU and GPU."
+
+# === Build Final Summary ===
+summary = f"""
 System Summary from {start_time.date()} to {end_time.date()}:
+
 Average CPU Utilization: {cpu_avg:.2f}%
 Average GPU Utilization: {gpu_avg:.2f}%
+
 Max CPU Queue Time: {cpu_max_q:.2f} days
 Max GPU Queue Time: {gpu_max_q:.2f} days
 
-Insight: Utilization remains consistently high. GPU queue times are generally longer than CPU queue times.
+Insight:
+- {utilization_comment}
+- {queue_comment}
 """
-    print(summary)
+
+print(summary)
