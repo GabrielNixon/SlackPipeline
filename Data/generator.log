@@ -882,9 +882,12 @@ Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/dem
 Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250611T170548Z.json
 Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250611T180548Z.json
 Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250611T190548Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250611T200548Z.jsonemo_hourly_20250611T030719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250611T040719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250611T050719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250611T200548Z.json[main 2a2b91f] Add demo_hourly_20250611T200548Z.json
+ 2 files changed, 92 insertions(+), 96 deletions(-)
+ create mode 100644 Data/hourly/demo_hourly_20250611T200548Z.json
+To github.com:GabrielNixon/SlackPipeline.git
+   5dffff9..2a2b91f  main -> main
+json
 Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250611T060719Z.json
 Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250611T070719Z.json
 Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250611T080719Z.json
