@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import datetime
 from transformers import pipeline
 
-def summarize_from_json(start_date: str, end_date: str, target: str = "summary"):
+def summarize_from_json(start_date, end_date, cpu=False, gpu=False, summary=False, days_down=False):
     with open("../Data/demo_hourly_5months.json", "r") as f:
         data = json.load(f)
 
@@ -16,7 +16,7 @@ def summarize_from_json(start_date: str, end_date: str, target: str = "summary")
     filtered = df[(df["timestamp"] >= start) & (df["timestamp"] <= end)]
 
     if filtered.empty:
-        return f"No data found between {start.date()} and {end.date()}."
+        return f"No data found between {start_date} and {end_date}."
 
     cpu_avg = filtered["cpu.utilization_percent"].mean()
     gpu_avg = filtered["gpu.utilization_percent"].mean()
@@ -29,52 +29,44 @@ def summarize_from_json(start_date: str, end_date: str, target: str = "summary")
     cpu_q_below_1 = (filtered["cpu.queue_days"] < 1).sum()
     gpu_q_below_1 = (filtered["gpu.queue_days"] < 1).sum()
 
-    utilization_comment = (
-        "Both CPU and GPU resources are highly utilized." if cpu_avg > 90 and gpu_avg > 90 else
-        "At least one of CPU or GPU is under heavy usage." if cpu_avg > 85 or gpu_avg > 85 else
-        "Utilization is moderate."
-    )
-    queue_comment = (
-        "GPU queue times are significantly higher than CPU." if gpu_max_q > cpu_max_q + 2 else
-        "CPU queue is relatively more congested." if cpu_max_q > gpu_max_q + 2 else
-        "Queue times are fairly balanced."
-    )
+    output = f"\nSystem Summary: {start.date()} to {end.date()}\n"
 
-    full_summary = f"""
-System Summary: {start.date()} to {end.date()}
+    if cpu:
+        output += f"\nAverage CPU Utilization: {cpu_avg:.2f}%\n"
+        output += f"CPU Queue Time: min {cpu_min_q:.2f} to max {cpu_max_q:.2f} days\n"
+        output += f"Days with CPU Utilization < 80%: {cpu_days_below_80}\n"
+        output += f"Days with CPU Queue < 1 day: {cpu_q_below_1}\n"
 
-Average CPU Utilization: {cpu_avg:.2f}%
-Average GPU Utilization: {gpu_avg:.2f}%
+    if gpu:
+        output += f"\nAverage GPU Utilization: {gpu_avg:.2f}%\n"
+        output += f"GPU Queue Time: min {gpu_min_q:.2f} to max {gpu_max_q:.2f} days\n"
+        output += f"Days with GPU Utilization < 80%: {gpu_days_below_80}\n"
+        output += f"Days with GPU Queue < 1 day: {gpu_q_below_1}\n"
 
-Max CPU Queue Time: {cpu_max_q:.2f} days
-Min CPU Queue Time: {cpu_min_q:.2f} days
-Max GPU Queue Time: {gpu_max_q:.2f} days
-Min GPU Queue Time: {gpu_min_q:.2f} days
+    if days_down:
+        output += f"\nUnderload Days:\n"
+        output += f"CPU Util < 80%: {cpu_days_below_80} days\n"
+        output += f"GPU Util < 80%: {gpu_days_below_80} days\n"
+        output += f"CPU Queue < 1 day: {cpu_q_below_1} days\n"
+        output += f"GPU Queue < 1 day: {gpu_q_below_1} days\n"
 
-Days with CPU Utilization < 80%: {cpu_days_below_80}
-Days with GPU Utilization < 80%: {gpu_days_below_80}
-Days with CPU Queue < 1 day: {cpu_q_below_1}
-Days with GPU Queue < 1 day: {gpu_q_below_1}
+    if summary or (not cpu and not gpu and not days_down):
+        if cpu_avg > 90 and gpu_avg > 90:
+            utilization_comment = "Both CPU and GPU resources are highly utilized."
+        elif cpu_avg > 85 or gpu_avg > 85:
+            utilization_comment = "At least one of CPU or GPU is under heavy usage."
+        else:
+            utilization_comment = "Utilization is moderate."
 
-Insights:
-- {utilization_comment}
-- {queue_comment}
-"""
+        if gpu_max_q > cpu_max_q + 2:
+            queue_comment = "GPU queue times are significantly higher than CPU."
+        elif cpu_max_q > gpu_max_q + 2:
+            queue_comment = "CPU queue is relatively more congested."
+        else:
+            queue_comment = "Queue times are fairly balanced."
 
-    if target.lower() == "cpu":
-        return f"CPU average utilization: {cpu_avg:.2f}%\nCPU queue range: {cpu_min_q:.2f}–{cpu_max_q:.2f} days"
-    elif target.lower() == "gpu":
-        return f"GPU average utilization: {gpu_avg:.2f}%\nGPU queue range: {gpu_min_q:.2f}–{gpu_max_q:.2f} days"
-    elif target.lower() == "down":
-        return f"""
-From {start.date()} to {end.date()}:
-- CPU Util < 80%: {cpu_days_below_80} days
-- GPU Util < 80%: {gpu_days_below_80} days
-- CPU Queue < 1 day: {cpu_q_below_1} days
-- GPU Queue < 1 day: {gpu_q_below_1} days"""
-    elif target.lower() == "summary":
-        summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6", device=0)
-        ai_summary = summarizer(full_summary.strip(), max_length=100, min_length=30, do_sample=False)[0]["summary_text"]
-        return f"{full_summary}\nAI Summary:\n{ai_summary}"
-    else:
-        return full_summary
+        output += "\nInsights:\n"
+        output += f"- {utilization_comment}\n"
+        output += f"- {queue_comment}\n"
+
+    return output.strip()
