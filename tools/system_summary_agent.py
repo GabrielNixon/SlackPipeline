@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import datetime
 from transformers import pipeline
 
-with open("demo_hourly_5months.json", "r") as f:
+with open("Data/demo_hourly_5months.json", "r") as f:
     data = json.load(f)
 
 df = pd.json_normalize(data)
