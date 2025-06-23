@@ -2,9 +2,11 @@ import json
 from tool_registry import TOOL_REGISTRY
 
 def simple_router(query: str):
-    if "summary" in query.lower():
+    keywords = ["summary", "average", "cpu", "gpu", "queue", "utilization", "report"]
+    if any(word in query.lower() for word in keywords):
         return "slack_summary"
     return None
+
 
 def main():
     print("Ask me a question:")
