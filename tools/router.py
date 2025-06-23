@@ -16,36 +16,30 @@ def parse_natural_date_range(query):
     query = query.lower()
     now = datetime.now(timezone.utc)
 
-    if "last week" in query:
-        end = now
-        start = now - timedelta(days=7)
-        return start, end
-
-    match = re.search(r"last (\d+) day", query)
-    if match:
-        num = int(match.group(1))
-        end = now
-        start = end - timedelta(days=num)
-        return start, end
-
-    match = re.search(r"between (.+?) and (.+)", query)
-    if match:
-        start = dateparser.parse(match.group(1), settings={'TIMEZONE': 'UTC', 'RETURN_AS_TIMEZONE_AWARE': True})
-        end = dateparser.parse(match.group(2), settings={'TIMEZONE': 'UTC', 'RETURN_AS_TIMEZONE_AWARE': True})
-        if start and end:
+    if "last" in query and "day" in query:
+        try:
+            num = int(re.search(r"last (\d+) day", query).group(1))
+            end = now
+            start = end - timedelta(days=num)
             return start, end
-
-    # Check for single month/year like "March 2025"
-    match = re.search(r"([a-zA-Z]+\s+\d{4})", query)
-    if match:
-        dt = dateparser.parse(match.group(1), settings={'TIMEZONE': 'UTC', 'RETURN_AS_TIMEZONE_AWARE': True})
-        if dt:
-            start = datetime(dt.year, dt.month, 1, tzinfo=timezone.utc)
-            if dt.month == 12:
-                end = datetime(dt.year + 1, 1, 1, tzinfo=timezone.utc) - timedelta(seconds=1)
-            else:
-                end = datetime(dt.year, dt.month + 1, 1, tzinfo=timezone.utc) - timedelta(seconds=1)
-            return start, end
+        except:
+            pass
+    elif "last week" in query:
+        end = now
+        start = end - timedelta(days=7)
+        return start, end
+    elif "last month" in query:
+        first_day_this_month = datetime(now.year, now.month, 1, tzinfo=timezone.utc)
+        last_month_end = first_day_this_month - timedelta(days=1)
+        last_month_start = datetime(last_month_end.year, last_month_end.month, 1, tzinfo=timezone.utc)
+        return last_month_start, last_month_end
+    elif "between" in query:
+        match = re.search(r"between (.+?) and (.+)", query)
+        if match:
+            start = dateparser.parse(match.group(1), settings={'TIMEZONE': 'UTC'})
+            end = dateparser.parse(match.group(2), settings={'TIMEZONE': 'UTC'})
+            if start and end:
+                return start, end
 
     return None, None
 
@@ -58,11 +52,11 @@ def simple_router(query):
         params["start_date"] = str(start_date.date())
         params["end_date"] = str(end_date.date())
 
-    for key in KEYWORDS.keys():
+    for key in ["cpu", "gpu", "summary", "days_down"]:
         if match_keyword(query, key):
             params[key] = True
 
-    if params:
+    if "start_date" in params and "end_date" in params:
         return task, params
     else:
         return None, {}
