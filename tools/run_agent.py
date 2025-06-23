@@ -9,7 +9,7 @@ def simple_router(query: str):
 
 
 def main():
-    print("Ask me a question:")
+    print("Enter a time window to summarize system usage:")
     user_query = input(">> ")
 
     tool_name = simple_router(user_query)
