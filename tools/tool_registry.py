@@ -1,9 +1,9 @@
-from tools.slack_summary.tool import summarize_slack_data
+from system_summary_agent import summarize_from_json
 
 TOOL_REGISTRY = {
     "slack_summary": {
-        "function": summarize_slack_data,
-        "description": "Summarizes system stats from synthetic Slack data between two dates.",
+        "function": summarize_from_json,
+        "description": "Summarizes system metrics from Slack JSON logs between given start and end date.",
         "args": ["start_date", "end_date"]
     }
 }
