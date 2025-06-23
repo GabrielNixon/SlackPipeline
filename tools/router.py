@@ -1,62 +1,68 @@
+import re
 import dateparser
-from datetime import datetime, timedelta
-import pandas as pd
+from datetime import datetime, timedelta, timezone
 
-def parse_natural_date_range(text: str):
-    text = text.lower()
-    today = datetime.now()
+KEYWORDS = {
+    "cpu": ["cpu", "processor", "core"],
+    "gpu": ["gpu", "graphics", "nvidia"],
+    "summary": ["summary", "report", "status", "overview"],
+    "days_down": ["days down", "under", "lower than", "less than"]
+}
 
-    if "last month" in text:
-        month = today.month - 1 or 12
-        year = today.year if today.month != 1 else today.year - 1
-        start = datetime(year, month, 1)
-        end = datetime(today.year, today.month, 1) - timedelta(days=1)
+def match_keyword(query, category):
+    return any(keyword in query.lower() for keyword in KEYWORDS[category])
 
-    elif "this month" in text:
-        start = datetime(today.year, today.month, 1)
-        end = today
+def parse_natural_date_range(query):
+    query = query.lower()
+    now = datetime.now(timezone.utc)
 
-    elif "last week" in text:
-        start = today - timedelta(days=today.weekday() + 7)
-        end = start + timedelta(days=6)
+    if "last week" in query:
+        end = now
+        start = now - timedelta(days=7)
+        return start, end
 
-    elif "this week" in text:
-        start = today - timedelta(days=today.weekday())
-        end = today
+    match = re.search(r"last (\d+) day", query)
+    if match:
+        num = int(match.group(1))
+        end = now
+        start = end - timedelta(days=num)
+        return start, end
 
-    elif "between" in text and "and" in text:
-        parts = text.split("between")[1].split("and")
-        start = dateparser.parse(parts[0].strip())
-        end = dateparser.parse(parts[1].strip())
+    match = re.search(r"between (.+?) and (.+)", query)
+    if match:
+        start = dateparser.parse(match.group(1), settings={'TIMEZONE': 'UTC', 'RETURN_AS_TIMEZONE_AWARE': True})
+        end = dateparser.parse(match.group(2), settings={'TIMEZONE': 'UTC', 'RETURN_AS_TIMEZONE_AWARE': True})
+        if start and end:
+            return start, end
 
-    elif "from" in text and "to" in text:
-        parts = text.split("from")[1].split("to")
-        start = dateparser.parse(parts[0].strip())
-        end = dateparser.parse(parts[1].strip())
-
-    elif "for" in text:
-        date_text = text.split("for")[1].strip()
-        parsed = dateparser.parse(date_text)
-        if parsed:
-            start = datetime(parsed.year, parsed.month, 1)
-            if parsed.month == 12:
-                end = datetime(parsed.year + 1, 1, 1) - timedelta(days=1)
+    # Check for single month/year like "March 2025"
+    match = re.search(r"([a-zA-Z]+\s+\d{4})", query)
+    if match:
+        dt = dateparser.parse(match.group(1), settings={'TIMEZONE': 'UTC', 'RETURN_AS_TIMEZONE_AWARE': True})
+        if dt:
+            start = datetime(dt.year, dt.month, 1, tzinfo=timezone.utc)
+            if dt.month == 12:
+                end = datetime(dt.year + 1, 1, 1, tzinfo=timezone.utc) - timedelta(seconds=1)
             else:
-                end = datetime(parsed.year, parsed.month + 1, 1) - timedelta(days=1)
-        else:
-            start = end = None
+                end = datetime(dt.year, dt.month + 1, 1, tzinfo=timezone.utc) - timedelta(seconds=1)
+            return start, end
+
+    return None, None
+
+def simple_router(query):
+    task = "slack_summary"
+    params = {}
+
+    start_date, end_date = parse_natural_date_range(query)
+    if start_date and end_date:
+        params["start_date"] = str(start_date.date())
+        params["end_date"] = str(end_date.date())
+
+    for key in KEYWORDS.keys():
+        if match_keyword(query, key):
+            params[key] = True
+
+    if params:
+        return task, params
     else:
-        start = end = None
-
-    if start and end:
-        start = pd.to_datetime(start).tz_localize("UTC")
-        end = pd.to_datetime(end).tz_localize("UTC")
-
-    return start, end
-
-
-def simple_router(query: str):
-    keywords = ["summary", "report", "cpu", "gpu", "utilization", "queue", "down", "days"]
-    if any(word in query.lower() for word in keywords):
-        return "slack_summary"
-    return None
+        return None, {}

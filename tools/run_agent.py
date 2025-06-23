@@ -1,35 +1,35 @@
-from tool_registry import TOOL_REGISTRY
 from router import simple_router, parse_natural_date_range
+from tool_registry import TOOL_REGISTRY
 
 def main():
     print("Enter a time window to summarize system usage:")
-    user_query = input(">> ")
+    query = input(">> ")
 
-    tool_name = simple_router(user_query)
-    if tool_name:
-        start, end = parse_natural_date_range(user_query)
+    tool_name = simple_router(query)
+    if not tool_name:
+        print("Sorry, I don't understand that yet.")
+        return
 
-        args = {}
-        for arg in TOOL_REGISTRY[tool_name]["args"]:
-            if arg == "start_date" and not start:
-                val = input("Enter start date (YYYY-MM-DD): ")
-                args[arg] = val
-            elif arg == "end_date" and not end:
-                val = input("Enter end date (YYYY-MM-DD): ")
-                args[arg] = val
-            elif arg == "start_date":
-                args[arg] = start.strftime("%Y-%m-%d")
-            elif arg == "end_date":
-                args[arg] = end.strftime("%Y-%m-%d")
-            else:
-                val = input(f"Enter value for {arg}: ")
-                args[arg] = val
+    try:
+        start, end = parse_natural_date_range(query)
+        target = "summary"
+        if "cpu" in query.lower():
+            target = "cpu"
+        elif "gpu" in query.lower():
+            target = "gpu"
+        elif "down" in query.lower():
+            target = "down"
 
-        result = TOOL_REGISTRY[tool_name]["function"](**args)
+        result = TOOL_REGISTRY[tool_name]["function"](
+            start_date=start.strftime("%Y-%m-%d"),
+            end_date=end.strftime("%Y-%m-%d"),
+            target=target
+        )
         print("\n--- Answer ---")
         print(result)
-    else:
-        print("Sorry, I don't know how to help with that yet.")
+
+    except Exception as e:
+        print("Error parsing input:", e)
 
 if __name__ == "__main__":
     main()
