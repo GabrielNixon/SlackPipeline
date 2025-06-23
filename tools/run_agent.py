@@ -1,12 +1,5 @@
-import json
 from tool_registry import TOOL_REGISTRY
-
-def simple_router(query: str):
-    keywords = ["summary", "average", "cpu", "gpu", "queue", "utilization", "report"]
-    if any(word in query.lower() for word in keywords):
-        return "slack_summary"
-    return None
-
+from router import simple_router, parse_natural_date_range
 
 def main():
     print("Ask me a question:")
@@ -14,10 +7,23 @@ def main():
 
     tool_name = simple_router(user_query)
     if tool_name:
+        start, end = parse_natural_date_range(user_query)
+
         args = {}
         for arg in TOOL_REGISTRY[tool_name]["args"]:
-            val = input(f"Enter value for {arg}: ")
-            args[arg] = val
+            if arg == "start_date" and not start:
+                val = input("Enter start date (YYYY-MM-DD): ")
+                args[arg] = val
+            elif arg == "end_date" and not end:
+                val = input("Enter end date (YYYY-MM-DD): ")
+                args[arg] = val
+            elif arg == "start_date":
+                args[arg] = start.strftime("%Y-%m-%d")
+            elif arg == "end_date":
+                args[arg] = end.strftime("%Y-%m-%d")
+            else:
+                val = input(f"Enter value for {arg}: ")
+                args[arg] = val
 
         result = TOOL_REGISTRY[tool_name]["function"](**args)
         print("\n--- Answer ---")
