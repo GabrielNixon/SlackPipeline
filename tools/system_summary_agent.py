@@ -1,30 +1,23 @@
 import json
 import pandas as pd
-from datetime import datetime
 from transformers import pipeline
 
-with open("../Data/demo_hourly_5months.json", "r") as f:
-    data = json.load(f)
+def summarize_from_json(start_date: str, end_date: str) -> str:
+    with open("../Data/demo_hourly_5months.json", "r") as f:
+        data = json.load(f)
 
-df = pd.json_normalize(data)
-df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
-df = df.sort_values("timestamp")
+    df = pd.json_normalize(data)
+    df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
+    df = df.sort_values("timestamp")
 
-def get_datetime(prompt):
-    while True:
-        try:
-            return pd.to_datetime(input(prompt)).tz_localize("UTC")
-        except Exception:
-            print("Invalid format. Please use YYYY-MM-DD.")
+    start_time = pd.to_datetime(start_date).tz_localize("UTC")
+    end_time = pd.to_datetime(end_date).tz_localize("UTC")
 
-start_time = get_datetime("Enter start date (YYYY-MM-DD): ")
-end_time = get_datetime("Enter end date (YYYY-MM-DD): ")
+    filtered = df[(df["timestamp"] >= start_time) & (df["timestamp"] <= end_time)]
 
-filtered = df[(df["timestamp"] >= start_time) & (df["timestamp"] <= end_time)]
+    if filtered.empty:
+        return f"No data found between {start_time.date()} and {end_time.date()}."
 
-if filtered.empty:
-    print(f"No data found between {start_time.date()} and {end_time.date()}.")
-else:
     cpu_avg = filtered["cpu.utilization_percent"].mean()
     gpu_avg = filtered["gpu.utilization_percent"].mean()
     cpu_max_q = filtered["cpu.queue_days"].max()
@@ -71,10 +64,7 @@ Insights:
 - {queue_comment}
 """
 
-    print(summary)
-
     summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6", device=0)
     ai_summary = summarizer(summary.strip(), max_length=100, min_length=30, do_sample=False)[0]["summary_text"]
 
-    print("\nAI Summary:")
-    print(ai_summary)
+    return f"{summary.strip()}\n\nAI Summary:\n{ai_summary.strip()}"
