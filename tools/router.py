@@ -1,7 +1,6 @@
 import re
 import dateparser
 from datetime import datetime, timedelta, timezone
-import calendar
 
 KEYWORDS = {
     "cpu": ["cpu", "processor", "core"],
@@ -13,51 +12,61 @@ KEYWORDS = {
 def match_keyword(query, category):
     return any(keyword in query.lower() for keyword in KEYWORDS[category])
 
-def parse_month_by_name(query):
-    query = query.lower()
-    months = list(calendar.month_name)[1:]  # Jan to Dec
-    for i, month in enumerate(months):
-        if month.lower() in query:
-            year = datetime.now().year
-            start = datetime(year, i + 1, 1, tzinfo=timezone.utc)
-            last_day = calendar.monthrange(year, i + 1)[1]
-            end = datetime(year, i + 1, last_day, 23, 59, 59, tzinfo=timezone.utc)
-            return start, end
-    return None, None
-
 def parse_natural_date_range(query):
     query = query.lower()
+    now = datetime.now(timezone.utc)
 
     if "last" in query and "day" in query:
         try:
             num = int(re.search(r"last (\d+) day", query).group(1))
-            end = datetime.now(timezone.utc)
+            end = now
             start = end - timedelta(days=num)
             return start, end
         except:
             pass
-    elif "last week" in query:
-        end = datetime.now(timezone.utc)
+
+    if "last week" in query:
+        end = now
         start = end - timedelta(days=7)
         return start, end
-    elif "last month" in query:
-        now = datetime.now(timezone.utc)
-        first_day_this_month = datetime(now.year, now.month, 1, tzinfo=timezone.utc)
-        last_day_last_month = first_day_this_month - timedelta(days=1)
-        start = datetime(last_day_last_month.year, last_day_last_month.month, 1, tzinfo=timezone.utc)
-        end = datetime(last_day_last_month.year, last_day_last_month.month,
-                       calendar.monthrange(last_day_last_month.year, last_day_last_month.month)[1],
-                       23, 59, 59, tzinfo=timezone.utc)
-        return start, end
-    elif "between" in query:
-        match = re.search(r"between (.+?) and (.+)", query)
-        if match:
-            start = dateparser.parse(match.group(1), settings={'TIMEZONE': 'UTC'})
-            end = dateparser.parse(match.group(2), settings={'TIMEZONE': 'UTC'})
-            if start and end:
+
+    match = re.search(r"between (.+?) and (.+)", query)
+    if match:
+        start = dateparser.parse(match.group(1), settings={'TIMEZONE': 'UTC'})
+        end = dateparser.parse(match.group(2), settings={'TIMEZONE': 'UTC'})
+        if start and end:
+            return start, end
+
+    match = re.search(r"(first|second|last) (\d+)? ?week[s]? of ([a-z]+ ?\d{0,4})", query)
+    if match:
+        part = match.group(1)
+        num_weeks = int(match.group(2)) if match.group(2) else 1
+        month_str = match.group(3).strip()
+        ref_date = dateparser.parse(f"1 {month_str}", settings={'TIMEZONE': 'UTC'})
+        if ref_date:
+            if part == "first":
+                start = ref_date
+                end = start + timedelta(weeks=num_weeks)
                 return start, end
-    else:
-        return parse_month_by_name(query)
+            elif part == "second":
+                start = ref_date + timedelta(weeks=1)
+                end = start + timedelta(weeks=num_weeks)
+                return start, end
+            elif part == "last":
+                next_month = ref_date.replace(day=28) + timedelta(days=4)
+                last_day = next_month - timedelta(days=next_month.day)
+                end = datetime.combine(last_day, datetime.min.time(), tzinfo=timezone.utc)
+                start = end - timedelta(weeks=num_weeks)
+                return start, end
+
+    month_match = re.search(r"(january|february|march|april|may|june|july|august|september|october|november|december)( \d{4})?", query)
+    if month_match:
+        month_str = month_match.group(0)
+        start = dateparser.parse(f"1 {month_str}", settings={'TIMEZONE': 'UTC'})
+        if start:
+            next_month = start.replace(day=28) + timedelta(days=4)
+            end = next_month - timedelta(days=next_month.day)
+            return start, end
 
     return None, None
 
@@ -74,7 +83,7 @@ def simple_router(query):
         if match_keyword(query, key):
             params[key] = True
 
-    if params.get("start_date") and params.get("end_date"):
+    if params:
         return task, params
     else:
         return None, {}
