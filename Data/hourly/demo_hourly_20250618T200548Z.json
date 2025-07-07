@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-06-18T20:05:48.663883Z",
+  "system": "DemoSystem",
+  "type": "hourly",
+  "cpu": {
+    "utilization_percent": 82.23,
+    "queue_days": 1.57
+  },
+  "gpu": {
+    "utilization_percent": 88.65,
+    "queue_days": 6.21
+  }
+}
