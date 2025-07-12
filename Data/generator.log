@@ -2142,145 +2142,81 @@ To github.com:GabrielNixon/SlackPipeline.git
  create mode 100644 Data/hourly/demo_hourly_20250621T010548Z.json
 To github.com:GabrielNixon/SlackPipeline.git
    06564c8..9e1fbdf  main -> main
-ed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T030719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   f2e6d4d..0aae2e3  main -> main
-[main 5a26a32] Add demo_hourly_20250620T040719Z.json
- 2 files changed, 18 insertions(+), 4 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T040719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   3a122a5..5a26a32  main -> main
-[main 4e068e8] Add demo_hourly_20250620T050719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T050719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   ea1e395..4e068e8  main -> main
-[main 93c24ac] Add demo_hourly_20250620T060719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T060719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   9402e40..93c24ac  main -> main
-[main 8799e25] Add demo_hourly_20250620T070719Z.json
- 2 files changed, 19 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T070719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   cd6e1b4..8799e25  main -> main
-[main fb6475c] Add demo_hourly_20250620T080719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T080719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   1373141..fb6475c  main -> main
-[main 6b76d9d] Add demo_hourly_20250620T090719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T090719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   1d1f5d2..6b76d9d  main -> main
-[main 8de069f] Add demo_hourly_20250620T100719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T100719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   c279275..8de069f  main -> main
-[main 07e5fd3] Add demo_hourly_20250620T110719Z.json
- 2 files changed, 18 insertions(+), 4 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T110719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   a3876b7..07e5fd3  main -> main
-[main f24f0c1] Add demo_hourly_20250620T120719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T120719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   00d7b5f..f24f0c1  main -> main
-[main db0291f] Add demo_hourly_20250620T130719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T130719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   8090eff..db0291f  main -> main
-[main f95a798] Add demo_hourly_20250620T140719Z.json
- 2 files changed, 18 insertions(+), 4 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T140719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   d5ff589..f95a798  main -> main
-[main 86532b1] Add demo_hourly_20250620T150719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T150719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   555035f..86532b1  main -> main
-[main e38385d] Add demo_hourly_20250620T160719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T160719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   0abc376..e38385d  main -> main
-[main 639d4dc] Add demo_hourly_20250620T170719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T170719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   21f7701..639d4dc  main -> main
-[main 1c8509c] Add demo_hourly_20250620T180719Z.json
- 2 files changed, 18 insertions(+), 4 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T180719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   f562d5c..1c8509c  main -> main
-[main 6873147] Add demo_hourly_20250620T190719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T190719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   fcd8374..6873147  main -> main
-[main dd29e61] Add demo_hourly_20250620T200719Z.json
- 2 files changed, 18 insertions(+), 4 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T200719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   3d31bcb..dd29e61  main -> main
-[main 4183c60] Add demo_hourly_20250620T210719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T210719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   e1eb85e..4183c60  main -> main
-[main f3d242d] Add demo_hourly_20250620T220719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T220719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   79f55da..f3d242d  main -> main
-[main b88aef5] Add demo_hourly_20250620T230719Z.json
- 2 files changed, 19 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250620T230719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   3f54ce2..b88aef5  main -> main
-[main 4165426] Add demo_hourly_20250621T000719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250621T000719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   b9fdc62..4165426  main -> main
-[main b51eb1c] Add demo_hourly_20250621T010719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250621T010719Z.json
-To github.com:GabrielNixon/SlackPipeline.git
-   b9b2657..b51eb1c  main -> main
 
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T010719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T020719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T030719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T040719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T050719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T060719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T070719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T080719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T090719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T100719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T110719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T120719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T130719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T140719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T150719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T160719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T170719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T180719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T190719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T200719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T210719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T220719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T230719Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T000719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T010548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T020548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T030548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T040548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T050548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T060548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T070548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T080548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T090548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T100548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T110548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T120548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T130548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T140548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T150548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T160548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T170548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T180548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T190548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T200548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T210548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T220548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250618T230548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T000548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T010548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T020548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T030548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T040548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T050548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T060548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T070548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T080548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T090548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T100548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T110548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T120548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T130548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T140548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T150548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T160548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T170548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T180548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T190548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T200548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T210548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T220548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T230548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T000548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T010548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T020548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T030548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T040548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T050548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T060548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T070548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T080548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T090548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T100548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T110548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T120548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T130548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T140548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T150548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T160548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T170548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T180548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T190548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T200548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T210548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T220548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250620T230548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250621T000548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250621T010548Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250621T020548Z.jsonGenerated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T000719Z.json
 Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T010719Z.json
 Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T020719Z.json
 Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250619T030719Z.json
@@ -2430,3 +2366,8 @@ To github.com:GabrielNixon/SlackPipeline.git
  create mode 100644 Data/hourly/demo_hourly_20250621T210719Z.json
 To github.com:GabrielNixon/SlackPipeline.git
    f3d79b4..06564c8  main -> main
+[main f933ae3] Add demo_hourly_20250621T220719Z.json
+ 2 files changed, 18 insertions(+), 5 deletions(-)
+ create mode 100644 Data/hourly/demo_hourly_20250621T220719Z.json
+To github.com:GabrielNixon/SlackPipeline.git
+   9e1fbdf..f933ae3  main -> main
