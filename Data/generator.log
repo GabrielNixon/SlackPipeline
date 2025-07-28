@@ -3304,12 +3304,12 @@ To github.com:GabrielNixon/SlackPipeline.git
  create mode 100644 Data/hourly/demo_hourly_20250628T210548Z.json
 To github.com:GabrielNixon/SlackPipeline.git
    3936e8f..c307b84  main -> main
-urly/demo_hourly_20250627T110719Z.json
+[main edbe751] Add demo_hourly_20250628T220548Z.json
+ 2 files changed, 18 insertions(+)
+ create mode 100644 Data/hourly/demo_hourly_20250628T220548Z.json
 To github.com:GabrielNixon/SlackPipeline.git
-   528af63..7d00081  main -> main
-[main 3e9524c] Add demo_hourly_20250627T120719Z.json
- 2 files changed, 18 insertions(+), 5 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250627T120719Z.json
+   8d4d02b..edbe751  main -> main
+e 100644 Data/hourly/demo_hourly_20250627T120719Z.json
 To github.com:GabrielNixon/SlackPipeline.git
    a948b63..3e9524c  main -> main
 [main 8728de2] Add demo_hourly_20250627T130719Z.json
