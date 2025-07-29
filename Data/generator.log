@@ -3369,11 +3369,12 @@ To github.com:GabrielNixon/SlackPipeline.git
  create mode 100644 Data/hourly/demo_hourly_20250629T100548Z.json
 To github.com:GabrielNixon/SlackPipeline.git
    ce09e68..038c35f  main -> main
- github.com:GabrielNixon/SlackPipeline.git
-   a5dce1b..8428df1  main -> main
-[main f93353a] Add demo_hourly_20250628T000719Z.json
- 2 files changed, 18 insertions(+), 4 deletions(-)
- create mode 100644 Data/hourly/demo_hourly_20250628T000719Z.json
+[main 46c5d32] Add demo_hourly_20250629T110548Z.json
+ 2 files changed, 18 insertions(+)
+ create mode 100644 Data/hourly/demo_hourly_20250629T110548Z.json
+To github.com:GabrielNixon/SlackPipeline.git
+   a2d0877..46c5d32  main -> main
+T000719Z.json
 To github.com:GabrielNixon/SlackPipeline.git
    8557fa5..f93353a  main -> main
 [main 470a49b] Add demo_hourly_20250628T010719Z.json
@@ -3651,3 +3652,78 @@ To github.com:GabrielNixon/SlackPipeline.git
  create mode 100644 Data/hourly/demo_hourly_20250630T070719Z.json
 To github.com:GabrielNixon/SlackPipeline.git
    038c35f..a2d0877  main -> main
+
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T070719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T080719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T090719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T100719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T110719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T120719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T130719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T140719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T150719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T160719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T170719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T180719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T190719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T200719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T210719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T220719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250627T230719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T000719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T010719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T020719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T030719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T040719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T050719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T060719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T070719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T080719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T090719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T100719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T110719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T120719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T130719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T140719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T150719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T160719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T170719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T180719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T190719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T200719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T210719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T220719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250628T230719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T000719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T010719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T020719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T030719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T040719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T050719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T060719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T070719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T080719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T090719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T100719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T110719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T120719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T130719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T140719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T150719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T160719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T170719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T180719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T190719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T200719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T210719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T220719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250629T230719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T000719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T010719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T020719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T030719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T040719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T050719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T060719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T070719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T080719Z.json
