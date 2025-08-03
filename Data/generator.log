@@ -3548,12 +3548,12 @@ Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/dem
 Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T050548Z.json
 Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T060548Z.json
 Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T070548Z.json
-Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T080548Z.jsonons(-)
- create mode 100644 Data/hourly/demo_hourly_20250630T040719Z.json
+Generated: /Users/gabrielnixonraj/Desktop/Untitled/SlackPipeline/Data/hourly/demo_hourly_20250630T080548Z.json[main dc822bc] Add demo_hourly_20250630T080548Z.json
+ 2 files changed, 93 insertions(+), 166 deletions(-)
+ create mode 100644 Data/hourly/demo_hourly_20250630T080548Z.json
 To github.com:GabrielNixon/SlackPipeline.git
-   363005f..04242ec  main -> main
-[main 52caab6] Add demo_hourly_20250630T050719Z.json
- 2 files changed, 18 insertions(+), 4 deletions(-)
+   18f907b..dc822bc  main -> main
+s(-)
  create mode 100644 Data/hourly/demo_hourly_20250630T050719Z.json
 To github.com:GabrielNixon/SlackPipeline.git
    f29ca6a..52caab6  main -> main
