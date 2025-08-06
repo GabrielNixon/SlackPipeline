@@ -3867,3 +3867,11 @@ To github.com:GabrielNixon/SlackPipeline.git
  create mode 100644 Data/hourly/demo_hourly_20250701T200719Z.json
 To github.com:GabrielNixon/SlackPipeline.git
    ff786d7..c5a865e  main -> main
+[main 3e396c0] Add demo_hourly_20250701T210719Z.json
+ 2 files changed, 19 insertions(+), 3 deletions(-)
+ create mode 100644 Data/hourly/demo_hourly_20250701T210719Z.json
+ssh: connect to host github.com port 22: Undefined error: 0
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
